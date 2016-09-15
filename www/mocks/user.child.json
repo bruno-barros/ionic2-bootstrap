@@ -1,0 +1,38 @@
+{
+  "msg": "USERS.SUCCESS",
+  "data": {
+    "id": 1,
+    "name": "Fulaninho Mendes",
+    "birtdate": "2012-12-28",
+    "avatar": "https://randomuser.me/api/portraits/thumb/men/5.jpg",
+    "schools": {
+      "27": {
+        "rooms_id": [
+          23,
+          47,
+          49
+        ]
+      },
+      "109": {
+        "rooms_id": [
+          203
+        ]
+      }
+    },
+    "subscription_status": {
+      "23": 1,
+      "47": 2,
+      "49": 1,
+      "203": 3
+    },
+    "parents": {
+      "19": {
+        "role": 7
+      },
+      "22": {
+        "role": 6
+      }
+    },
+    "metadata": {}
+  }
+}

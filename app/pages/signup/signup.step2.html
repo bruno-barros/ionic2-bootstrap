@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-navbar>
+        <button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+
+        <ion-title>Bem-vindo</ion-title>
+
+    </ion-navbar>
+</ion-header>
+<ion-content padding class="signup-step2-page">
+
+
+        <h1>Olá, {{ name }}.
+            <br/>
+            Seja bem-vindo ao Catavento.</h1>
+
+        <p>
+            Precisamos definir como você irá interagir com a gente, mas não se preocupe, você poderá alterar seu perfil a qualquer momento.
+        </p>
+
+    <br/>
+    <br/>
+
+    <div class="double-selection">
+
+        <div class="selection father">
+            <ion-icon name="person" (click)="iAm('par')"></ion-icon>
+            <p>Pai ou responsável por uma criança</p>
+        </div>
+        <div class="selection admin" (click)="iAm('sadm')">
+            <ion-icon name="school"></ion-icon>
+            <p>Administrador de uma creche ou escola</p>
+        </div>
+
+    </div>
+
+
+
+</ion-content>

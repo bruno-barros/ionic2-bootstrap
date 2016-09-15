@@ -1,0 +1,43 @@
+.user-menu-panel {
+
+  position: relative;
+  padding: 20px;
+  border-bottom: solid 1px whitesmoke;
+
+  button {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    ion-icon {
+
+    }
+  }
+
+  .user-avatar {
+    width: 70px;
+    height: 70px;
+    background: #efefef;
+    border-radius: 70px;
+    margin: 0;
+    right: 0;
+    overflow: hidden;
+
+    ion-icon
+    {
+      font-size: 86px;
+      line-height: 71px;
+      opacity: .2;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .user-name {
+    display: block;
+    margin: 10px 0 0 0;
+  }
+}

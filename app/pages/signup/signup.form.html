@@ -1,0 +1,63 @@
+<ion-header>
+
+    <ion-navbar>
+        <button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+
+        <ion-title>Cadastro</ion-title>
+
+    </ion-navbar>
+
+</ion-header>
+<ion-content padding class="signupform-page -page-centered">
+
+    <div class="page-inner">
+
+
+        <form #signUpForm="ngForm" novalidate>
+
+            <ion-list class="input-group">
+
+                <ion-item>
+                    <ion-label floating>Nome completo</ion-label>
+                    <ion-input type="text" [(ngModel)]="user.name"   ngControl="name"  required></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label floating>E-mail</ion-label>
+                    <ion-input type="email" [(ngModel)]="user.email"   ngControl="email" required></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label floating>Senha</ion-label>
+                    <ion-input type="password" [(ngModel)]="user.pwd"   ngControl="pwd" required></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label floating>Comfirmar senha</ion-label>
+                    <ion-input type="password" [(ngModel)]="user.pwd_conf"   ngControl="pwd_conf" required></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>Concordo com os termos de serviço</ion-label>
+                    <ion-checkbox [(ngModel)]="user.agreed" ngControl="agreed" required></ion-checkbox>
+                </ion-item>
+
+
+            </ion-list>
+
+
+
+            <button (click)="onSubmit(signUpForm)" type="submit"
+                    primary block round>Salvar</button>
+
+        </form>
+
+    </div>
+
+</ion-content>
+
+<ion-footer position="bottom" class="text-center">
+    <p><a (click)="openTerms()">Ler termos de serviço</a></p>
+</ion-footer>

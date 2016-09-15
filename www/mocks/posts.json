@@ -1,0 +1,68 @@
+{
+  "msg": "POST.SUCCESS",
+  "total_count": 3,
+  "items_per_page": 3,
+  "page": 1,
+  "data": [
+    {
+      "id": 11,
+      "ref_post_id": 0,
+      "account": {
+        "id": 1,
+        "name": "User Name",
+        "avatar": "https://randomuser.me/api/portraits/thumb/women/1.jpg"
+      },
+      "created": "",
+      "message": "",
+      "gallery": [
+        "https://placeimg.com/640/480/people",
+        "https://placeimg.com/640/640/nature",
+        "https://placeimg.com/480/640/people"
+      ],
+      "post_type": {
+        "id": 1,
+        "name": "post",
+        "icon": ""
+      },
+      "alarm": false
+    },
+    {
+      "id": 22,
+      "ref_post_id": 0,
+      "account": {
+        "id": 1,
+        "name": "User Name",
+        "avatar": "https://randomuser.me/api/portraits/thumb/men/5.jpg"
+      },
+      "created": "",
+      "message": "",
+      "gallery": [],
+      "post_type": {
+        "id": 1,
+        "name": "post",
+        "icon": ""
+      },
+      "alarm": false
+    },
+    {
+      "id": 33,
+      "ref_post_id": 0,
+      "account": {
+        "id": 1,
+        "name": "User Name",
+        "avatar": "https://randomuser.me/api/portraits/thumb/men/10.jpg"
+      },
+      "created": "",
+      "message": "",
+      "gallery": [
+        "https://placeimg.com/640/480/people"
+      ],
+      "post_type": {
+        "id": 1,
+        "name": "post",
+        "icon": ""
+      },
+      "alarm": false
+    }
+  ]
+}

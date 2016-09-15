@@ -1,0 +1,12 @@
+<div class="user-menu-panel">
+
+   <button (click)="gotoUserEdit()" clear dark class="edit"><ion-icon name="create"></ion-icon></button>
+
+    <div class="user-avatar">
+        <ion-icon name="contact" *ngIf="!user.avatar"></ion-icon>
+        <img src="{{ user.avatar }}" *ngIf="user.avatar" />
+    </div>
+
+    <div class="user-name">{{ user.name }}</div>
+
+</div>

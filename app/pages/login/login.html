@@ -1,0 +1,40 @@
+<ion-content class="login-page page-centered">
+
+    <div class="page-inner">
+
+        <div class="logo">
+            <img src="img/logo-w.svg">
+        </div>
+
+        <form #loginForm="ngForm" novalidate>
+
+            <ion-list no-lines class="input-group">
+                <ion-item>
+                    <ion-icon name="ios-mail-outline" item-left></ion-icon>
+                    <ion-input placeholder="E-mail"  [(ngModel)]="data.login" ngControl="username" type="email" #username="ngForm" required></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-icon name="ios-lock-outline" item-left></ion-icon>
+                    <ion-input placeholder="Senha" [(ngModel)]="data.pwd" ngControl="password" type="password" #password="ngForm" required></ion-input>
+                </ion-item>
+
+
+
+            </ion-list>
+
+
+            <button (click)="onLogin(loginForm)" type="submit"
+                    primary block round>Entrar</button>
+
+        </form>
+
+    </div>
+
+    <ion-toolbar position="bottom" class="footer">
+        <a class="left" (click)="gotoCreateAccount()">Criar conta</a> |
+        <a class="right" (click)="gotoNeedHelp()">Precisa de ajuda?</a>
+    </ion-toolbar>
+
+</ion-content>
+

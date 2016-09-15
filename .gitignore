@@ -1,0 +1,14 @@
+*.log
+*.tmp
+*.tmp.*
+*.map
+log.txt
+node_modules/
+www/build/
+platforms/
+plugins/
+.DS_Store
+.idea
+.io-config.json
+coverage/
+typings/

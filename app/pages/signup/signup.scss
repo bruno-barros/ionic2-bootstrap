@@ -1,0 +1,78 @@
+.signup-page {
+  text-align: center;
+  background-color: #3fbeca;
+
+  h1 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #fff;
+    width: 70%;
+  }
+
+  p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    max-width: 270px;
+  }
+}
+
+.sign-up-step1 {
+  .toolbar-background {
+    background-color: rgba(255, 255, 255, 0.42);
+    border: none;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.61+0,0+100 */
+    background: -moz-linear-gradient(top,  rgba(255,255,255,0.61) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0.61) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,255,255,0.61) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9cffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+
+
+  }
+  .bar-button-default,
+  .toolbar-title {
+    color: #fff;
+  }
+}
+
+.signup-step2-page {
+  background-color: #3fbeca;
+  color:#fff;
+  h1 {
+    margin-top: 20% !important;
+  }
+  p {
+    color:#fff;
+  }
+}
+.double-selection {
+
+  display: flex;
+  text-align: center;
+  margin: 0 -16px;
+
+  .selection {
+
+    width: 50%;
+    text-align: center;
+    padding: 10% 4%;
+
+    ion-icon {
+      font-size: 5rem;
+    }
+
+    &.father {
+      background-color: #319ea9;
+    }
+
+    &.admin {
+      background-color:#35b780;
+    }
+
+    p {
+      line-height: 1.2em;
+    }
+
+  }
+}
+

@@ -1,0 +1,34 @@
+<ion-menu [content]="rootContext" id="menu-default">
+
+    <ion-content>
+
+
+        <ion-list no-lines>
+
+
+            <div *ngFor="let p of appPages">
+
+                <hr *ngIf="p.type == 'dash'"/>
+
+                <ion-list-header *ngIf="p.type == 'heading'">
+                    {{p.title}}
+                </ion-list-header>
+
+                <button ion-item menuClose *ngIf="p.type == 'link'" (click)="openPage(p)">
+                <ion-icon item-left [name]="p.icon"></ion-icon>
+                {{p.title}}
+                    <ion-badge item-right>3</ion-badge>
+                </button>
+
+            </div>
+
+
+
+        </ion-list>
+
+
+    </ion-content>
+</ion-menu>
+
+
+<ion-nav id="nav" #rootContext [root]="rootPage"></ion-nav>

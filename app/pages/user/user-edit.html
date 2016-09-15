@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar>
+        <button menuToggle>
+            <ion-icon name='menu'></ion-icon>
+        </button>
+        <ion-title>Meus dados</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+
+    <form  #editForm="ngForm" novalidate>
+
+        <ion-list class="input-group">
+
+           <user-avatar (takePhoto)="getUserPhoto()" [user]="user"></user-avatar>
+
+            <ion-item>
+                <ion-label floating>Nome completo</ion-label>
+                <ion-input type="text" [(ngModel)]="user.name"   ngControl="name"  required></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label floating>E-mail</ion-label>
+                <ion-input type="email" [(ngModel)]="user.email"   ngControl="email" required></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label floating>Senha</ion-label>
+                <ion-input type="password" [(ngModel)]="user.pwd"   ngControl="pwd" required></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label floating>Comfirmar senha</ion-label>
+                <ion-input type="password" [(ngModel)]="user.pwd_conf"   ngControl="pwd_conf" required></ion-input>
+            </ion-item>
+
+
+
+        </ion-list>
+
+    </form>
+
+</ion-content>
+
+<ion-footer padding>
+    <button (click)="saveUserData(editForm)" block round>Salvar</button>
+</ion-footer>

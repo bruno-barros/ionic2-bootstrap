@@ -1,0 +1,55 @@
+{
+  "msg": "USERS.SUCCESS",
+  "total_count": 3,
+  "items_per_page": 3,
+  "page": 1,
+  "data": [
+    {
+      "id": 1,
+      "name": "Fulaninho Mendes",
+      "birtdate": "2012-12-28",
+      "avatar": "https://randomuser.me/api/portraits/thumb/men/5.jpg",
+      "schools": {
+        "27": {
+          "rooms_id": [ 23, 47, 49 ]
+        },
+        "109": {
+          "rooms_id": [ 203 ]
+        }
+      },
+      "subscription_status": {
+        "23": 1,
+        "47": 2,
+        "49": 1,
+        "203": 3
+      },
+      "parents": {
+        "19": { "role": 7 },
+        "22": { "role": 6 }
+      },
+      "metadata": {}
+    },
+    {
+      "id": 2,
+      "name": "Beltraninho Mendes",
+      "birtdate": "2014-09-05",
+      "avatar": "https://randomuser.me/api/portraits/thumb/men/6.jpg",
+      "schools": {
+        "27": {
+          "rooms_id": [ 23, 47, 49 ]
+        }
+      },
+      "subscription_status": {
+        "23": 1,
+        "47": 2,
+        "49": 1,
+        "203": 3
+      },
+      "parents": {
+        "19": { "role": 7 },
+        "22": { "role": 6 }
+      },
+      "metadata": {}
+    }
+  ]
+}

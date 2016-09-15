@@ -1,0 +1,31 @@
+<ion-header>
+
+    <ion-navbar>
+        <button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+
+        <ion-title>Entrar</ion-title>
+
+    </ion-navbar>
+
+</ion-header>
+<ion-content class="signup-page page-centered">
+
+    <div class="page-inner">
+
+        <h1>Deseja entrar com sua rede social favorita?</h1>
+
+        <p>
+            <button (click)="loginWith('facebook')"  block round class="btn-facebook">Entrar com Facebook</button>
+            <br/>
+            <button (click)="loginWith('google')" block round class="btn-google">Entrar com Google</button>
+        </p>
+
+        <p>
+            <button (click)="gotoCreateAccount()" light block round>Prefiro criar uma nova conta</button>
+        </p>
+
+    </div>
+
+</ion-content>

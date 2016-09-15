@@ -1,0 +1,25 @@
+{
+  "msg": "POST.SUCCESS",
+  "data": {
+    "id": 11,
+    "ref_post_id": 0,
+    "account": {
+      "id": 1,
+      "name": "User Name",
+      "avatar": "https://randomuser.me/api/portraits/thumb/men/3.jpg"
+    },
+    "created": "",
+    "message": "",
+    "gallery": [
+      "https://placeimg.com/640/480/people",
+      "https://placeimg.com/640/640/nature",
+      "https://placeimg.com/480/640/people"
+    ],
+    "post_type": {
+      "id": 1,
+      "name": "post",
+      "icon": ""
+    },
+    "alarm": false
+  }
+}

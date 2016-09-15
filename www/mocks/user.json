@@ -1,0 +1,22 @@
+{
+  "msg": "USER.SUCCESS",
+  "data": {
+    "id": 123,
+    "account_status": 1,
+    "name": "Washington Mendes",
+    "login": "my@email.com",
+    "emails": [
+      "my@email.com"
+    ],
+    "phones": [
+      "21 1234-5678",
+      "(21) 99887 3344"
+    ],
+    "avatar": "https://randomuser.me/api/portraits/thumb/men/1.jpg",
+    "roles": [
+      "admin",
+      "helper"
+    ],
+    "metadata": {}
+  }
+}

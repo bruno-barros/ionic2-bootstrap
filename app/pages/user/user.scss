@@ -1,0 +1,42 @@
+.user-avatar {
+
+  position: relative;
+  right: -20px;
+  bottom: 0;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+
+  .edit {
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+
+    ion-icon {
+    }
+  }
+
+  .icon {
+    display: block;
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    overflow: hidden;
+    margin: 0 auto;
+
+    // icon
+    ion-icon {
+      font-size: 83px;
+      line-height: 68px;
+      opacity: .2;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+  }
+}

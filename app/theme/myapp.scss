@@ -1,0 +1,36 @@
+p {
+  line-height: 1.6em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.page-centered {
+
+  .logo {
+
+    width: 80%;
+    margin-bottom: 3rem;
+
+    img {
+
+    }
+
+  }
+
+  .page-inner {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+  }
+
+}
+
+
+.toolbar-background {
+
+}

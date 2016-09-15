@@ -1,4 +1,4 @@
-# Catavento
+# Ionic2 Bootstrap
 
 ## Events
 

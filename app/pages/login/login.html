@@ -3,20 +3,20 @@
     <div class="page-inner">
 
         <div class="logo">
-            <img src="img/logo-w.svg">
+            <h1>LOGO</h1>
         </div>
 
-        <form #loginForm="ngForm" novalidate>
+        <form [formGroup]="loginForm" novalidate>
 
             <ion-list no-lines class="input-group">
                 <ion-item>
                     <ion-icon name="ios-mail-outline" item-left></ion-icon>
-                    <ion-input placeholder="E-mail"  [(ngModel)]="data.login" ngControl="username" type="email" #username="ngForm" required></ion-input>
+                    <ion-input placeholder="E-mail"  formControlName="username" type="email"></ion-input>
                 </ion-item>
 
                 <ion-item>
                     <ion-icon name="ios-lock-outline" item-left></ion-icon>
-                    <ion-input placeholder="Senha" [(ngModel)]="data.pwd" ngControl="password" type="password" #password="ngForm" required></ion-input>
+                    <ion-input placeholder="Senha" formControlName="password" type="password"></ion-input>
                 </ion-item>
 
 

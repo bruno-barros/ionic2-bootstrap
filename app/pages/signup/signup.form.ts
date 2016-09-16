@@ -1,4 +1,6 @@
 import {Component, OnInit, OnDestroy} from '@angular/core';
+//import {FORM_DIRECTIVES, FormBuilder, ControlGroup, Validators} from '@angular/common';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {ModalController, NavController, Events, LoadingController} from 'ionic-angular';
 import {TermsService} from './terms.service';
 import {Auth} from '../../entities/user';
@@ -21,6 +23,8 @@ export class SignUpForm implements OnInit, OnDestroy {
         agreed: false
     };
 
+    signUpForm:FormGroup;
+
     submitted:boolean = false;
 
     private _ModalCloseHandler:() => void;
@@ -28,9 +32,19 @@ export class SignUpForm implements OnInit, OnDestroy {
     constructor(private nav:NavController,
                 private ev:Events,
                 private auth:Auth,
+                private fb:FormBuilder,
                 private service:SignUpService,
                 private loading:LoadingController,
                 private modal:ModalController) {
+
+
+        this.signUpForm = fb.group({
+            name: ['', Validators.required],
+            email: ['', Validators.required],
+            pwd: ['', Validators.required],
+            pwd_conf: ['', Validators.required],
+            agreed: [false, Validators.required],
+        });
     }
 
     ngOnInit():void {
@@ -44,9 +58,12 @@ export class SignUpForm implements OnInit, OnDestroy {
         this.ev.unsubscribe('modal:close', this._ModalCloseHandler);
     }
 
-    onSubmit(form) {
+    onSubmit() {
 
-        this.submitted = true;
+        //console.log(this.signUpForm.valid);
+        //console.log(this.signUpForm.value);
+
+        //this.submitted = true;
 
         // TODO just faking server communication
         let loading = this.loading.create({

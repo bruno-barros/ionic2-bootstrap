@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {SETTINGS} from '../../settings';
 import {NavController, Events, AlertController} from 'ionic-angular';
 import {MainMenu} from '../../modules/menus/main.menu';
@@ -16,12 +17,20 @@ export class Login implements OnInit {
     data:{ login: string, pwd: string } = {login: '', pwd: ''};
     submitted = false;
 
+    loginForm:FormGroup;
+
     constructor(protected nav:NavController,
                 private auth:Auth,
                 private ev:Events,
+                private fb:FormBuilder,
                 private menu:MainMenu,
                 private userRead:UserRead,
                 private alert:AlertController) {
+
+        this.loginForm = fb.group({
+            username: [''],
+            password: ['']
+        });
     }
 
     ngOnInit():void {

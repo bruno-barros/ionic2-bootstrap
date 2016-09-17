@@ -2,10 +2,9 @@ import {Injectable, Inject} from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
 /**
- *
- administrator, school, school admin, school financial, staff, parent, helper, children
+ * User roles
  */
-export enum USER_ROLES {adm = 0, sch = 1, sadm = 2, sfin = 3, stf = 4, par = 5, hlp = 6, chi = 7};
+export enum USER_ROLES {admin = 0, editor = 1, author = 2, subscriber = 3, contributor = 4, unknown = 5}
 
 export interface UserInterface {
     id?:number,
@@ -17,15 +16,15 @@ export interface UserInterface {
     avatar: string,
     role: string
 
-};
+}
 
 @Injectable()
 export class User {
 
-    protected defaultRole = 5;
+    protected defaultRole = 3;
 
     protected model:UserInterface = {
-        id:null,
+        id: null,
         "account_status": null,
         name: null,
         login: null,
@@ -42,6 +41,8 @@ export class User {
      */
     fill(data) {
 
+        console.log('User.fill >>', data);
+
         let email = '';
         if (typeof data.emails !== 'string') {
             email = data.emails[0];
@@ -55,8 +56,7 @@ export class User {
         this.model.email = email || '';// just keep main email easy to get
         this.model.emails = data.emails || [];
         this.model.avatar = data.avatar || '';
-        //this.model.role = data.type || USER_ROLES[this.defaultRole];
-
+        this.model.role = data.role || USER_ROLES[this.defaultRole];
 
     }
 
@@ -84,7 +84,6 @@ export class User {
     }
 
 
-
     /**
      * Get the user role as string
      * @returns {string}
@@ -106,13 +105,12 @@ export class User {
         this.model.role = newRole;
     }
 
-    set avatar(newAvatar:string){
+    set avatar(newAvatar:string) {
         this.model.avatar = newAvatar;
     }
 
 
 }
-
 
 
 @Injectable()
@@ -140,36 +138,36 @@ export class Auth extends User {
      */
     is(neededRole:string|number, modifier:string = '='):boolean {
 
-        if(!this.check()){
+        if (!this.check()) {
             return false;
         }
 
-            let authRole:any = USER_ROLES[this.model.role];
+        let authRole:any = USER_ROLES[this.model.role];
         let needRole:any = USER_ROLES[neededRole];
 
         // get the number
-        if(typeof authRole !== 'number'){
+        if (typeof authRole !== 'number') {
             authRole = USER_ROLES[USER_ROLES[this.model.role]];
         }
         // get the number
-        if(typeof needRole !== 'number'){
+        if (typeof needRole !== 'number') {
             needRole = USER_ROLES[USER_ROLES[neededRole]];
         }
 
-        if((modifier === '=' || modifier === '<=' || modifier === '>=')
-            && (authRole === needRole)){
+        if ((modifier === '=' || modifier === '<=' || modifier === '>=')
+            && (authRole === needRole)) {
             return true;
         }
-        if((modifier === '!=' || modifier === '<>')
-            && (authRole !== needRole)){
+        if ((modifier === '!=' || modifier === '<>')
+            && (authRole !== needRole)) {
             return true;
         }
-        if((modifier === '>' || modifier === '>=')
-            && (authRole > needRole)){
+        if ((modifier === '>' || modifier === '>=')
+            && (authRole > needRole)) {
             return true;
         }
-        if((modifier === '<' || modifier === '<=')
-            && (authRole < needRole)){
+        if ((modifier === '<' || modifier === '<=')
+            && (authRole < needRole)) {
             return true;
         }
 

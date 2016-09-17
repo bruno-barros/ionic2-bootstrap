@@ -61,7 +61,7 @@ export class SignUpForm implements OnInit, OnDestroy {
     onSubmit() {
 
         //console.log(this.signUpForm.valid);
-        //console.log(this.signUpForm.value);
+        console.log(this.signUpForm.value.email);
 
         //this.submitted = true;
 

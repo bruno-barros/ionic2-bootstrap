@@ -13,10 +13,7 @@
       "(21) 99887 3344"
     ],
     "avatar": "https://randomuser.me/api/portraits/thumb/men/1.jpg",
-    "roles": [
-      "admin",
-      "helper"
-    ],
+    "role": "subscriber",
     "metadata": {}
   }
 }

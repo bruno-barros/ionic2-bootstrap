@@ -5,12 +5,12 @@ import {NavController, Events, AlertController} from 'ionic-angular';
 import {MainMenu} from '../../modules/menus/main.menu';
 import {SignUpStep1} from '../signup/signup.step1';
 import {Auth} from '../../entities/user';
-import {UserRead} from '../../modules/user.service';
+import {UserService} from '../../modules/user.service';
 import {User} from "../../entities/user";
 
 @Component({
     templateUrl: 'build/pages/login/login.html',
-    providers: [UserRead]
+    providers: [UserService]
 })
 export class Login implements OnInit {
 
@@ -24,7 +24,7 @@ export class Login implements OnInit {
                 private ev:Events,
                 private fb:FormBuilder,
                 private menu:MainMenu,
-                private userRead:UserRead,
+                private userService:UserService,
                 private alert:AlertController) {
 
         this.loginForm = fb.group({
@@ -53,7 +53,7 @@ export class Login implements OnInit {
             //this.userData.login(this.login.username);
 
             // TODO if success log user in
-            this.userRead.findWithCredentials(this.data.login, this.data.pwd)
+            this.userService.findWithCredentials(this.data.login, this.data.pwd)
                 .subscribe((validUser) => {
 
                     if (validUser) {

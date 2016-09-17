@@ -7,11 +7,15 @@ import {Welcome} from './pages/welcome/welcome';
 import {MainMenu, MenuItemInterface} from './modules/menus/main.menu';
 import {Auth, USER_ROLES} from './entities/user'
 import {UserEdit} from "./pages/user/user-edit";
-import {UserRead} from './modules/user.service';
+import {UserService} from './modules/user.service';
+import {UserCard} from './modules/menus/user-card';
+import {UserDb} from './modules/user.db';
+
 
 @Component({
     templateUrl: 'build/app.html',
-    providers: [UserRead]
+    providers: [UserService, NavController],
+    directives: [UserCard]
 })
 export class MyApp {
     // the root nav is a child of the root app component
@@ -32,7 +36,7 @@ export class MyApp {
                 private menu:MainMenu,
                 private auth:Auth,
                 private ev:Events,
-    private login:UserRead) {
+                private userService:UserService) {
 
         this.initializeApp();
 
@@ -47,6 +51,16 @@ export class MyApp {
             this.registerMenuItems();
             this.registerListeners();
             //this.performAutoLogin();// << development purpose
+
+            //var u = new UserDb();
+            //u.all().then((res) => {
+            //    console.log(res.res.rows[0]);
+            //});
+            //u.create({name:'teste name', email:'test@mail.com', role:'author'}).then((res) => {
+            //   console.log(res);
+            //
+            //});
+
         });
     }
 
@@ -62,17 +76,17 @@ export class MyApp {
 
     }
 
-    registerMenuItems(){
+    registerMenuItems() {
         this.appPages = this.menu.getMenuItems();
     }
 
     registerListeners() {
 
         this.ev.subscribe('user:signup', (params) => {
-            //this.auth.fill(params[0]);
-            //this.menu.enable();
-            //this.appPages = this.menu.getMenuItems();
-            //this.nav.setRoot(SignUpStep2);
+            this.auth.fill(params[0]);// log user
+            this.menu.enable();// enable menu
+            this.appPages = this.menu.getMenuItems();// fill menu with pages
+            this.nav.setRoot(Home);
         });
         this.ev.subscribe('user:updated', (params) => {
             console.log('User updated: ', params[0].toJson());
@@ -91,15 +105,15 @@ export class MyApp {
 
     }
 
-    // TODO to remove
+    // user-card event
     //gotoUserEdit(){
     //    this.menu.getMenuInstance().close();
     //    this.nav.push(UserEdit);
     //}
 
 
-    performAutoLogin(){
-        this.login.findWithCredentials('', '')
+    performAutoLogin() {
+        this.userService.findWithCredentials('', '')
             .subscribe((validUser) => {
                 if (validUser) {
                     this.auth.fill(validUser);

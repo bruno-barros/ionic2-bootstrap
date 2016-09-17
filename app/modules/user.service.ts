@@ -8,7 +8,7 @@ import './core/rxjs-operators';
  * Dedicated service to read routines
  */
 @Injectable()
-export class UserRead extends BaseService{
+export class UserService extends BaseService{
 
     constructor(protected http:Http) {
         super(http);

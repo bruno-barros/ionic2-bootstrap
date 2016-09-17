@@ -7,22 +7,23 @@ import {AvatarEdit} from './avatar-edit';
     templateUrl: 'build/pages/user/user-edit.html',
     directives: [AvatarEdit]
 })
-export class UserEdit implements OnInit{
+export class UserEdit implements OnInit {
 
     user:UserInterface;
 
     constructor(private auth:Auth,
                 private nav:NavController,
                 private ev:Events,
-    private alert:AlertController){}
+                private alert:AlertController) {
+    }
 
-    ngOnInit():void{
+    ngOnInit():void {
         this.user = this.auth.user();
     }
 
-    saveUserData(form){
+    saveUserData(form) {
 
-        if(!form.valid){
+        if (!form.valid) {
             let alert = this.alert.create({
                 title: 'Atenção',
                 subTitle: 'Todos os campos são obrigatórios',
@@ -37,7 +38,7 @@ export class UserEdit implements OnInit{
     /**
      * TODO implement camera access
      */
-    getUserPhoto(){
+    getUserPhoto() {
         // get image
         let newAvatar = '';
 

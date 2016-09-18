@@ -83,11 +83,9 @@ export abstract class BaseDb {
         let db = this.db;
 
         return db.query(sql).then((success) => {
-
             return db.query(`DELETE FROM sqlite_sequence WHERE name=(?)`, [this.table]);
-
         }, (err) => {
-            return new Promise.reject(err);
+            return Promise.reject(err);
         });
     }
 

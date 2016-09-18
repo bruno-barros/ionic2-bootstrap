@@ -1,5 +1,5 @@
 import {NavController} from 'ionic-angular';
-import {Login} from '../../pages/login/login';
+import {Login} from '../../pages/login/login.component';
 
 export abstract class BasePage {
 

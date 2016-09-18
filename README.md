@@ -1,5 +1,10 @@
 # Ionic2 Bootstrap
 
+## Settings.json
+
+Create a `settings.development.json` and `settings.production.json` for configuration depending on environment.
+See `settings.example.json` to example. 
+
 ## Events
 
 `('user:signup', User)`

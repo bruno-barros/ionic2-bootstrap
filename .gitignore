@@ -12,3 +12,5 @@ plugins/
 .io-config.json
 coverage/
 typings/
+settings.*.json
+!settings.example.json

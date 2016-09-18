@@ -1,8 +1,8 @@
 import {Component, Injectable, OnInit} from '@angular/core';
 import {MenuController} from 'ionic-angular';
 import {User, Auth} from "../../entities/user";
-import {Home} from '../../pages/home/home';
-import {Login} from '../../pages/login/login';
+import {Home} from '../../pages/home/home.component';
+import {Login} from '../../pages/login/login.component';
 import {BasePage} from "../core/base.page";
 
 export interface MenuItemInterface {

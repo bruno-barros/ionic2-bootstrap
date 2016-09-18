@@ -18,14 +18,13 @@ export class UserDb extends BaseDb {
         (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         name TEXT,
+        login TEXT,
         email TEXT,
+        avatar TEXT,
         role TEXT
         )`;
         this.db.query(sql);
     }
-
-
-
 
 
 }

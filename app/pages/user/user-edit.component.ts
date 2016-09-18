@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {NavController, AlertController, Events} from 'ionic-angular';
 import {Auth, UserInterface} from '../../entities/user';
-import {AvatarEdit} from './avatar-edit';
+import {AvatarEdit} from './avatar-edit.component';
 
 @Component({
     templateUrl: 'build/pages/user/user-edit.html',

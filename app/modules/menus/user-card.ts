@@ -2,7 +2,7 @@ import {Component, Output, OnInit, OnDestroy, EventEmitter} from '@angular/core'
 import {Events, IONIC_DIRECTIVES, NavController} from 'ionic-angular';
 import {Auth} from "../../entities/user";
 import {MainMenu} from './main.menu';
-import {UserEdit} from '../../pages/user/user-edit';
+import {UserEdit} from '../../pages/user/user-edit.component';
 
 @Component({
     selector: 'user-card',

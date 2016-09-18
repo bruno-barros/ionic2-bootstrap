@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {Modal, NavController,ViewController, NavParams, Events} from 'ionic-angular';
-import {SignUpForm} from './signup.form';
+import {SignUpForm} from './signup.form.component';
 
 
 @Component({

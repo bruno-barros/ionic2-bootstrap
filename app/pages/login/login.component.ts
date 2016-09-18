@@ -3,7 +3,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {SETTINGS} from '../../settings';
 import {NavController, Events, AlertController} from 'ionic-angular';
 import {MainMenu} from '../../modules/menus/main.menu';
-import {SignUpStep1} from '../signup/signup.step1';
+import {SignUpStep1} from '../signup/signup.step1.component';
 import {Auth} from '../../entities/user';
 import {UserService} from '../../modules/user.service';
 import {User} from "../../entities/user";

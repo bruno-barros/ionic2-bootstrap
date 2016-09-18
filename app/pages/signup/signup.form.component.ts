@@ -63,18 +63,26 @@ export class SignUpForm implements OnInit, OnDestroy {
         //console.log(this.signUpForm.valid);
         console.log(this.signUpForm.value.email);
 
+        let user = {
+            name: this.signUpForm.value.name,
+            email: this.signUpForm.value.email,
+            role: 'subscription',
+        };
+
         //this.submitted = true;
 
         // TODO just faking server communication
         let loading = this.loading.create({
             content: "Simulação...",
-            duration: 3000
+            //duration: 3000
         });
         loading.present();
 
-        this.service.create(this.user)
+        this.service.create(user)
             .subscribe((user) => {
                 this.ev.publish('user:signup', user);
+            }, (err) => {
+                //loading.rem
             });
 
     }

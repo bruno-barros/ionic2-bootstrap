@@ -1,12 +1,12 @@
 import {Component, ViewChild} from '@angular/core';
 import {MenuController, NavController, Platform, Nav, Events, ionicBootstrap} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
-import {Home} from './pages/home/home';
-import {Login} from './pages/login/login';
-import {Welcome} from './pages/welcome/welcome';
+import {Home} from './pages/home/home.component';
+import {Login} from './pages/login/login.component';
+import {Welcome} from './pages/welcome/welcome.component';
 import {MainMenu, MenuItemInterface} from './modules/menus/main.menu';
 import {Auth, USER_ROLES} from './entities/user'
-import {UserEdit} from "./pages/user/user-edit";
+import {UserEdit} from "./pages/user/user-edit.component";
 import {UserService} from './modules/user.service';
 import {UserCard} from './modules/menus/user-card';
 import {UserDb} from './modules/user.db';

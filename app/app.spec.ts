@@ -3,7 +3,7 @@ import {
 }                               from '@angular/platform-browser-dynamic/testing';
 import { setBaseTestProviders } from '@angular/core/testing';
 import { MyApp }           from './app';
-import {Welcome} from './pages/welcome/welcome';
+import {Welcome} from './pages/welcome/welcome.component';
 //import { Page2 }                from './pages/page2/page2';
 
 setBaseTestProviders(TEST_BROWSER_DYNAMIC_PLATFORM_PROVIDERS, TEST_BROWSER_DYNAMIC_APPLICATION_PROVIDERS);

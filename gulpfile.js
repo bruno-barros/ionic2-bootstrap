@@ -90,7 +90,7 @@ gulp.task('settings', function (cb) {
         file = 'settings.production.json';
     }
 
-    var json = require('./app/'+file);
+    var json = require('./'+file);
 
     var settingsFile = `// !! This file will be overwritten by settings.*.json
 `;

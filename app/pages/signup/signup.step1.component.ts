@@ -1,12 +1,10 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
-import {SignUpForm} from './signup.form';
+import {SignUpForm} from './signup.form.component';
+
 @Component({
     templateUrl: 'build/pages/signup/signup.step1.html'
 })
-
-
-
 export class SignUpStep1 {
 
 

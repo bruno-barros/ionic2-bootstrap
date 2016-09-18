@@ -9,7 +9,6 @@ export class UserDb extends BaseDb {
 
     constructor() {
         super();
-        //this.storage = new Storage(SqlStorage);
         this.init();
     }
 
@@ -22,28 +21,10 @@ export class UserDb extends BaseDb {
         email TEXT,
         role TEXT
         )`;
-        this.storage.query(sql);
+        this.db.query(sql);
     }
 
 
-    /**
-     * Insert new user
-     * @param data
-     * @returns {Promise<any>}
-     */
-    public create(data = {name: '', email: '', role: 'subscriber'}) {
-        let sql = `INSERT INTO ${this.table} (name, email, role) VALUES (?, ?, ?)`;
-        return this.storage.query(sql, [data.name, data.email, data.role]);
-    }
-
-
-
-
-    // update category
-    update(id, data = {name:'', email:''}) {
-        let sql = `UPDATE ${this.table} SET name = ?, email = ? WHERE id = ?`;
-        return this.storage.query(sql, [data.name, data.email, id]);
-    }
 
 
 

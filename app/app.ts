@@ -10,6 +10,7 @@ import {UserEdit} from "./pages/user/user-edit";
 import {UserService} from './modules/user.service';
 import {UserCard} from './modules/menus/user-card';
 import {UserDb} from './modules/user.db';
+import {DB} from './modules/core/base.db';
 
 
 @Component({
@@ -52,14 +53,14 @@ export class MyApp {
             this.registerListeners();
             //this.performAutoLogin();// << development purpose
 
-            //var u = new UserDb();
-            //u.all().then((res) => {
-            //    console.log(res.res.rows[0]);
+            var u = new UserDb();
+            //u.reset().then((res) => {
+            //   console.log('reseted');
+            //u.create({name:'Bruno'});
+            //}, (e) => {
+            //    console.log(e);
             //});
-            //u.create({name:'teste name', email:'test@mail.com', role:'author'}).then((res) => {
-            //   console.log(res);
-            //
-            //});
+            //u.create({name:'Anna'});
 
         });
     }
